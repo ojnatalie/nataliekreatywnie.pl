@@ -393,7 +393,7 @@ function SkoraTeaserSection({ tweaks }) {
                   : "Realistyczna skóra w AI"}
               </h2>
             </div>
-            <span className="section__head-meta">portrety AI ● koniec plastikowej skóry</span>
+            <span className="section__head-meta">portrety AI ● tutorial</span>
           </div>
           <p className="prompt-teaser__desc">
 Twoje zdjęcia AI wciąż wyglądają zbyt idealnie? Oto jak zatrzymać efekt „plastikowej skóry" — 3 konkretne kroki i gotowe prompty do skopiowania.
@@ -421,7 +421,7 @@ Twoje zdjęcia AI wciąż wyglądają zbyt idealnie? Oto jak zatrzymać efekt �
         <div className="prompt-teaser__cta-row">
           <div className="prompt-teaser__pill-group">
             <span className="pill"><span className="dot"></span>6 gotowych promptów</span>
-            <span className="pill"><span className="dot"></span>midjourney · dall·e · sd</span>
+            <span className="pill"><span className="dot"></span>midjourney · tutorial</span>
           </div>
           <a className="cta" href="skora.html">
             Otwórz tutorial
