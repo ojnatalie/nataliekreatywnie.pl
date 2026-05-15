@@ -263,15 +263,15 @@ function TutorialsIntro({ tweaks }) {
     <section className="section prompt-teaser tutorials-intro" id="porady-ai">
       <div className="wrap">
         <div className="tutorials-intro__inner">
-          <span className="mono">narzędzia · seria</span>
+          <span className="mono">narzędzia · seria tutoriali</span>
           <h2 className="h-section tutorials-intro__title">
             {useItalic
               ? <>Tutoriale <span className="italic">z AI?</span></>
               : "Tutoriale z AI?"}
           </h2>
           <p className="tutorials-intro__desc">
-            Konkretne prompty, rozbiory parametrów, gotowe pliki do skopiowania.
-            Wybierz, co Cię interesuje — branding, realistyczna skóra w portretach, klimat zdjęć analogowych.
+            Prompty gotowe do skopiowania, porady i wskazówki.
+            Wybierz, co Cię interesuje i przejdź do tutorialu.
           </p>
           <div className="tutorials-intro__chips">
             <a href="#prompty" className="tutorials-intro__chip">
@@ -284,7 +284,7 @@ function TutorialsIntro({ tweaks }) {
             </a>
             <a href="#midjourney" className="tutorials-intro__chip">
               <span className="num">03</span>
-              <span>analog · midjourney</span>
+              <span>klimat analogowych zdjęć · midjourney</span>
             </a>
           </div>
         </div>
