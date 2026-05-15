@@ -78,8 +78,8 @@ function Nav() {
    Hero
    ===================================================== */
 const HERO_PHOTOS = {
-  studio: { src: "img/hero-main.png", label: "Studio · ikonki AI", pos: "center 22%" },
-  figma:  { src: "img/MS-1.png", label: "Figma + Claude", pos: "center 30%" },
+  studio: { src: "img/MS-1.png", label: "Studio · ikonki AI", pos: "center 22%" },
+  figma:  { src: "img/hero-main.png", label: "Figma + Claude", pos: "center 30%" },
   affinity: { src: "img/affinity-claude.png", label: "Affinity + Claude", pos: "center 18%" },
   green: { src: "img/affinity-green.png", label: "Affinity · lime", pos: "center 22%" },
 };
@@ -458,11 +458,11 @@ function AboutSection({ tweaks }) {
           <div className="about__photo">
             <div className="tape" aria-hidden="true"></div>
             <div className="frame">
-              <img src="img/figma-claude.png" alt="Natalia przy pracy — Figma + Claude" />
+              <img src="img/figma-claude.png" alt="Natalia przy pracy — Grafika x AI" />
             </div>
             <div className="caption">
               <span className="dot"></span>
-              Figma x Claude? ● Tak!
+              Grafika x AI? ● Tak!
             </div>
           </div>
         </div>
