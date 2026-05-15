@@ -458,7 +458,7 @@ function AboutSection({ tweaks }) {
           <div className="about__photo">
             <div className="tape" aria-hidden="true"></div>
             <div className="frame">
-              <img src="img/figma-claude.png" alt="Natalia przy pracy — Grafika x AI" />
+              <img src="img/hero-main.png" alt="Natalia przy pracy — Grafika x AI" />
             </div>
             <div className="caption">
               <span className="dot"></span>
