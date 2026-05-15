@@ -96,7 +96,7 @@ function Hero({ tweaks }) {
             <div className="hero__label">
               <span className="tag">Cześć!</span>
               <span className="ast">*</span>
-              <span className="mono" style={{ fontSize: 11 }}>natalie.kreatywnie ● Opole</span>
+              <span className="mono" style={{ fontSize: 11 }}>natalie.kreatywnie</span>
             </div>
 
             <h1 className="h-display hero__h1">
