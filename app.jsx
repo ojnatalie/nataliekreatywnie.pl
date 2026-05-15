@@ -79,7 +79,7 @@ function Nav() {
    ===================================================== */
 const HERO_PHOTOS = {
   studio: { src: "img/hero-main.png", label: "Studio · ikonki AI", pos: "center 22%" },
-  figma:  { src: "img/figma-claude.png", label: "Figma + Claude", pos: "center 30%" },
+  figma:  { src: "img/MS-1.png", label: "Figma + Claude", pos: "center 30%" },
   affinity: { src: "img/affinity-claude.png", label: "Affinity + Claude", pos: "center 18%" },
   green: { src: "img/affinity-green.png", label: "Affinity · lime", pos: "center 22%" },
 };
