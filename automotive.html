@@ -1,0 +1,926 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prompt do generowania premium posterów automotive</title>
+  <meta name="description" content="Gotowy prompt do generowania luksusowych posterów motoryzacyjnych za pomocą AI. Wpisz markę i model — otrzymasz premium poster reklamowy. Autorstwa IG: @natalie.kreatywnie" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    /* ============================================================
+       natalie.kreatywnie — automotive prompt subpage
+       ============================================================ */
+
+    :root {
+      --bg: #FAFAFA;
+      --ink: #0A0A0A;
+      --ink-2: #1A1A1A;
+      --muted: #6B6B6B;
+      --muted-2: #9A9A9A;
+      --line: #E6E6E6;
+      --line-strong: #0A0A0A;
+
+      --lime: #51F500;
+      --lime-tint: #F0FCE0;
+      --lime-tint-2: #EBF9D6;
+      --marker: #FFE600;
+
+      --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.06);
+      --shadow-lift: 0 12px 24px rgba(0, 0, 0, 0.08);
+      --shadow-card-hover: 0 18px 36px rgba(0, 0, 0, 0.10);
+
+      --f-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+      --f-mono: "DM Mono", ui-monospace, "JetBrains Mono", Menlo, monospace;
+      --f-serif: "Instrument Serif", "Times New Roman", serif;
+
+      --r-card: 16px;
+      --r-pill: 999px;
+
+      --maxw: 1240px;
+      --pad: clamp(20px, 4vw, 56px);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--f-sans);
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 1.55;
+      letter-spacing: -0.005em;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; padding: 0; }
+
+    ::selection { background: var(--lime); color: var(--ink); }
+
+    .wrap {
+      width: 100%;
+      max-width: var(--maxw);
+      margin-inline: auto;
+      padding-inline: var(--pad);
+    }
+
+    .section {
+      padding-block: clamp(60px, 9vw, 112px);
+      position: relative;
+    }
+
+    /* --- Nav --- */
+    .nav {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: saturate(140%) blur(12px);
+      -webkit-backdrop-filter: saturate(140%) blur(12px);
+      background: rgba(250, 250, 250, 0.78);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav__inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-block: 18px;
+    }
+    .nav__brand {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: var(--f-sans);
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      font-size: 16px;
+    }
+    .nav__brand .glyph {
+      width: 28px; height: 28px; border-radius: 8px;
+      background: var(--lime);
+      display: inline-flex; align-items: center; justify-content: center;
+      font-family: var(--f-serif); font-style: italic;
+      font-size: 20px; color: var(--ink);
+      box-shadow: 0 0 0 2px #fff inset, 0 4px 14px rgba(81,245,0,0.35);
+    }
+    .nav__back {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--f-mono);
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: lowercase;
+      color: var(--muted);
+      transition: color .2s ease;
+    }
+    .nav__back:hover { color: var(--ink); }
+    .nav__back svg { transition: transform .25s ease; }
+    .nav__back:hover svg { transform: translateX(-3px); }
+
+    /* --- Hero / header --- */
+    .page-hero {
+      padding-top: clamp(48px, 7vw, 96px);
+      padding-bottom: clamp(48px, 6vw, 80px);
+      border-bottom: 1px solid var(--line);
+    }
+    .page-hero__eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: var(--f-mono); font-size: 12px;
+      letter-spacing: 0.08em; text-transform: lowercase;
+      color: var(--muted); margin-bottom: 20px;
+    }
+    .page-hero__eyebrow .dot {
+      width: 6px; height: 6px; border-radius: 999px; background: var(--lime);
+    }
+    .page-hero__title {
+      font-family: var(--f-sans); font-weight: 800;
+      letter-spacing: -0.02em; line-height: 1.02;
+      font-size: clamp(38px, 6.5vw, 80px);
+      margin: 0 0 20px; color: var(--ink);
+      text-wrap: balance;
+    }
+    .page-hero__title .italic {
+      font-family: var(--f-serif); font-weight: 400; font-style: italic;
+      letter-spacing: -0.015em;
+    }
+    .page-hero__sub {
+      font-size: clamp(17px, 1.6vw, 20px);
+      color: var(--muted); max-width: 60ch; margin: 0;
+      line-height: 1.6;
+    }
+
+    /* --- Author note card --- */
+    .author-note {
+      margin: clamp(40px, 5vw, 64px) 0 0;
+    }
+    .author-note__card {
+      display: flex; align-items: flex-start; gap: 20px;
+      background: #fff;
+      border: 1.5px solid var(--ink);
+      border-radius: var(--r-card);
+      padding: 28px 32px;
+      position: relative;
+      overflow: hidden;
+      max-width: 780px;
+    }
+    .author-note__card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--lime);
+    }
+    .author-note__avatar {
+      flex-shrink: 0;
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      background: var(--lime);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--f-serif); font-style: italic;
+      font-size: 26px; color: var(--ink);
+      font-weight: 400;
+      box-shadow: 0 4px 14px rgba(81,245,0,0.3);
+    }
+    .author-note__body { flex: 1; min-width: 0; }
+    .author-note__label {
+      font-family: var(--f-mono); font-size: 11px;
+      letter-spacing: 0.1em; text-transform: lowercase;
+      color: var(--muted); margin-bottom: 8px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .author-note__label::after {
+      content: "";
+      flex: 1; height: 1px; background: var(--line);
+    }
+    .author-note__text {
+      font-size: 16px; color: var(--ink-2);
+      line-height: 1.6; margin: 0 0 14px;
+    }
+    .author-note__sig {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--f-mono); font-size: 12px;
+      letter-spacing: 0.04em; color: var(--muted);
+    }
+    .author-note__sig a {
+      color: var(--ink); font-weight: 500;
+      border-bottom: 1.5px solid var(--lime);
+      transition: color .2s;
+    }
+    .author-note__sig a:hover { color: var(--lime); }
+    .author-note__sig .sep { color: var(--line); }
+
+    /* --- Gallery --- */
+    .gallery { padding-block: clamp(48px, 6vw, 80px); }
+    .gallery__label {
+      font-family: var(--f-mono); font-size: 12px;
+      letter-spacing: 0.08em; text-transform: lowercase;
+      color: var(--muted); margin-bottom: 24px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .gallery__label .dot { width: 6px; height: 6px; border-radius: 999px; background: var(--lime); }
+    .gallery__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: clamp(12px, 1.2vw, 16px);
+    }
+    @media (max-width: 900px) { .gallery__grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 520px) { .gallery__grid { grid-template-columns: 1fr; } }
+
+    .gallery__item {
+      position: relative;
+      aspect-ratio: 3 / 4;
+      border-radius: var(--r-card);
+      overflow: hidden;
+      background: #1a1a1a;
+      transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s ease;
+    }
+    .gallery__item:hover { transform: translateY(-5px) rotate(0.4deg); box-shadow: var(--shadow-card-hover); }
+    .gallery__item img {
+      width: 100%; height: 100%; object-fit: cover; object-position: center;
+      transition: transform .6s cubic-bezier(.2,.7,.2,1);
+    }
+    .gallery__item:hover img { transform: scale(1.04); }
+    .gallery__item .tag {
+      position: absolute; bottom: 12px; left: 12px;
+      font-family: var(--f-mono); font-size: 10px;
+      letter-spacing: 0.06em; text-transform: lowercase;
+      background: rgba(255,255,255,0.92);
+      border-radius: 999px; padding: 5px 10px;
+      color: var(--ink);
+    }
+
+    /* --- Divider --- */
+    .divider {
+      display: flex; align-items: center; gap: 16px;
+      font-family: var(--f-mono); font-size: 11px;
+      letter-spacing: 0.1em; text-transform: lowercase;
+      color: var(--muted-2); margin: 0;
+    }
+    .divider::before, .divider::after {
+      content: ""; flex: 1; height: 1px; background: var(--line);
+    }
+
+    /* --- Prompt section --- */
+    .prompt-section {
+      background: var(--bg);
+      padding-block: clamp(48px, 6vw, 80px);
+    }
+    .prompt-section__head {
+      margin-bottom: 36px;
+    }
+    .prompt-section__eyebrow {
+      font-family: var(--f-mono); font-size: 12px;
+      letter-spacing: 0.08em; text-transform: lowercase;
+      color: var(--muted); margin-bottom: 12px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .prompt-section__eyebrow .dot { width: 6px; height: 6px; border-radius: 999px; background: var(--lime); }
+    .prompt-section__title {
+      font-family: var(--f-sans); font-weight: 800;
+      font-size: clamp(28px, 3.5vw, 44px);
+      letter-spacing: -0.02em; margin: 0 0 12px;
+    }
+    .prompt-section__title .italic {
+      font-family: var(--f-serif); font-weight: 400; font-style: italic;
+    }
+    .prompt-section__desc {
+      color: var(--muted); font-size: 16px; max-width: 60ch; margin: 0;
+    }
+
+    /* Copy button + container */
+    .prompt-wrapper {
+      position: relative;
+      background: #fff;
+      border: 1.5px solid var(--ink);
+      border-radius: var(--r-card);
+      overflow: hidden;
+    }
+    .prompt-toolbar {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--line);
+      background: var(--bg);
+    }
+    .prompt-toolbar__label {
+      display: flex; align-items: center; gap: 10px;
+      font-family: var(--f-mono); font-size: 11px;
+      letter-spacing: 0.08em; text-transform: lowercase; color: var(--muted);
+    }
+    .prompt-toolbar__dots { display: flex; gap: 6px; }
+    .prompt-toolbar__dots span {
+      width: 10px; height: 10px; border-radius: 999px;
+      display: block;
+    }
+    .prompt-toolbar__dots .d1 { background: #FF5F57; }
+    .prompt-toolbar__dots .d2 { background: #FFBE2E; }
+    .prompt-toolbar__dots .d3 { background: #28C840; }
+
+    .btn-copy {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 18px;
+      background: var(--ink);
+      color: #fff;
+      border-radius: var(--r-pill);
+      font-family: var(--f-sans); font-weight: 600; font-size: 13px;
+      letter-spacing: -0.005em;
+      transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
+      border: 1.5px solid var(--ink);
+      cursor: pointer;
+    }
+    .btn-copy:hover {
+      background: var(--lime);
+      color: var(--ink);
+      border-color: var(--lime);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(81,245,0,0.3);
+    }
+    .btn-copy.--copied {
+      background: var(--lime);
+      color: var(--ink);
+      border-color: var(--lime);
+    }
+    .btn-copy svg { width: 14px; height: 14px; }
+
+    .prompt-body {
+      padding: 28px 32px;
+      font-family: var(--f-mono);
+      font-size: 13.5px;
+      line-height: 1.75;
+      letter-spacing: 0.01em;
+      color: var(--ink-2);
+      white-space: pre-wrap;
+      word-break: break-word;
+      max-height: 680px;
+      overflow-y: auto;
+      scroll-behavior: smooth;
+    }
+    .prompt-body::-webkit-scrollbar { width: 6px; }
+    .prompt-body::-webkit-scrollbar-track { background: transparent; }
+    .prompt-body::-webkit-scrollbar-thumb { background: var(--line); border-radius: 999px; }
+    .prompt-body::-webkit-scrollbar-thumb:hover { background: var(--muted-2); }
+
+    .prompt-expand {
+      display: flex; align-items: center; justify-content: center;
+      padding: 14px;
+      border-top: 1px dashed var(--line);
+      background: var(--bg);
+    }
+    .btn-expand {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--f-mono); font-size: 11px;
+      letter-spacing: 0.06em; text-transform: lowercase;
+      color: var(--muted); cursor: pointer;
+      border: 0; background: none;
+      transition: color .2s ease;
+    }
+    .btn-expand:hover { color: var(--ink); }
+
+    /* --- How to use --- */
+    .how-to {
+      background: var(--lime-tint);
+      padding-block: clamp(48px, 6vw, 72px);
+      border-top: 1px solid rgba(10,10,10,0.08);
+    }
+    .how-to__title {
+      font-family: var(--f-sans); font-weight: 800;
+      font-size: clamp(24px, 3vw, 38px);
+      letter-spacing: -0.02em; margin: 0 0 36px;
+    }
+    .how-to__title .italic {
+      font-family: var(--f-serif); font-weight: 400; font-style: italic;
+    }
+    .how-to__steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(16px, 1.6vw, 24px);
+    }
+    @media (max-width: 760px) { .how-to__steps { grid-template-columns: 1fr; } }
+    .how-to__step {
+      background: #fff;
+      border: 1.5px solid rgba(10,10,10,0.12);
+      border-radius: var(--r-card);
+      padding: 28px 24px;
+      position: relative;
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .how-to__step:hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); }
+    .how-to__step-num {
+      font-family: var(--f-sans); font-weight: 800;
+      font-size: 48px; line-height: 1;
+      letter-spacing: -0.04em;
+      color: var(--ink); opacity: 0.08;
+      position: absolute; top: 16px; right: 20px;
+    }
+    .how-to__step-icon {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: var(--lime);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px; margin-bottom: 16px;
+    }
+    .how-to__step-title {
+      font-family: var(--f-sans); font-weight: 700;
+      font-size: 18px; letter-spacing: -0.01em;
+      margin: 0 0 8px; color: var(--ink);
+    }
+    .how-to__step-text {
+      font-size: 15px; color: var(--muted); line-height: 1.6; margin: 0;
+    }
+
+    /* --- Footer --- */
+    .footer {
+      border-top: 1px solid var(--line);
+      padding: 32px 0;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; flex-wrap: wrap;
+      font-family: var(--f-mono); font-size: 12px;
+      color: var(--muted); letter-spacing: 0.06em;
+    }
+    .footer a:hover { color: var(--ink); }
+    .footer__brand {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-weight: 500; color: var(--ink);
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%) translateY(80px);
+      background: var(--ink); color: #fff;
+      font-family: var(--f-mono); font-size: 12px;
+      letter-spacing: 0.06em; text-transform: lowercase;
+      padding: 12px 20px; border-radius: var(--r-pill);
+      display: flex; align-items: center; gap: 8px;
+      z-index: 200;
+      transition: transform .35s cubic-bezier(.2,.7,.2,1), opacity .35s ease;
+      opacity: 0; pointer-events: none;
+    }
+    .toast.is-visible { transform: translateX(-50%) translateY(0); opacity: 1; }
+    .toast .lime { color: var(--lime); }
+
+    @media (max-width: 640px) {
+      .prompt-body { padding: 20px 18px; font-size: 12.5px; }
+      .author-note__card { flex-direction: column; gap: 14px; padding: 22px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="wrap nav__inner">
+      <a href="index.html" class="nav__brand">
+        <span class="glyph">n</span>
+        natalie.kreatywnie
+      </a>
+      <a href="/" class="nav__back">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M8.5 2.5L4 7l4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        powrót do strony
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="page-hero section">
+    <div class="wrap">
+      <div class="page-hero__eyebrow">
+        <span class="dot"></span>
+        poster motoryzacyjny · prompt
+      </div>
+      <h1 class="page-hero__title">
+        Prompt do generowania<br>
+        premium <span class="italic">posterów</span> automotive
+      </h1>
+      <p class="page-hero__sub">
+        Kompleksowy prompt do tworzenia luksusowych plakatów reklamowych samochodów za pomocą AI. Wpisz markę i model, wygeneruj gotowy poster w estetyce premium kampanii motoryzacyjnej.
+      </p>
+
+      <!-- Author note -->
+      <div class="author-note">
+        <div class="author-note__card">
+          <div class="author-note__avatar">n</div>
+          <div class="author-note__body">
+            <div class="author-note__label">notatka od autorki</div>
+            <p class="author-note__text">
+              Hej! Cieszę się, że chcesz przetestować ten prompt. Działa świetnie zarówno na klasykach polskiej motoryzacji, jak i współczesnych autach premium. Powodzenia w testach!
+            </p>
+            <div class="author-note__sig">
+              <span>~ Natalia</span>
+              <span class="sep">·</span>
+              <a href="https://www.instagram.com/natalie.kreatywnie/" target="_blank" rel="noopener">@natalie.kreatywnie</a>
+              <span class="sep">·</span>
+              <a href="https://www.instagram.com/natalie.kreatywnie/" target="_blank" rel="noopener">Instagram ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery">
+    <div class="wrap">
+      <div class="gallery__label">
+        <span class="dot"></span>
+        przykładowe wyniki · postery wygenerowane tym promptem
+      </div>
+      <div class="gallery__grid">
+        <div class="gallery__item">
+          <img src="img/auto-warszawa.png" alt="FSO Warszawa — premium poster automotive" loading="lazy" onerror="this.parentElement.style.background='#3a0d0d'">
+          <span class="tag">fso warszawa</span>
+        </div>
+        <div class="gallery__item">
+          <img src="img/auto-polonez.png" alt="FSO Polonez — premium poster automotive" loading="lazy" onerror="this.parentElement.style.background='#0d2418'">
+          <span class="tag">fso polonez</span>
+        </div>
+        <div class="gallery__item">
+          <img src="img/auto-126p.png" alt="Polski Fiat 126p Maluch — premium poster automotive" loading="lazy" onerror="this.parentElement.style.background='#2a2418'">
+          <span class="tag">fiat 126p</span>
+        </div>
+        <div class="gallery__item">
+          <img src="img/auto-125p.png" alt="Fiat 125p Duży Fiat — premium poster automotive" loading="lazy" onerror="this.parentElement.style.background='#1f1f1f'">
+          <span class="tag">fiat 125p</span>
+        </div>
+        <div class="gallery__item">
+          <img src="img/auto-audi-a7.png" alt="Audi A7 Sportback — premium poster automotive" loading="lazy" onerror="this.parentElement.style.background='#161616'">
+          <span class="tag">audi a7</span>
+        </div>
+        <div class="gallery__item">
+          <img src="img/auto-panamera.png" alt="Porsche Panamera — premium poster automotive" loading="lazy" onerror="this.parentElement.style.background='#161616'">
+          <span class="tag">porsche panamera</span>
+        </div>
+        <div class="gallery__item">
+          <img src="img/auto-gtr.png" alt="Nissan GT-R — premium poster automotive" loading="lazy" onerror="this.parentElement.style.background='#161616'">
+          <span class="tag">nissan gt-r</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="divider">przykłady · prompt poniżej</div>
+  </div>
+
+  <!-- Prompt -->
+  <section class="prompt-section section">
+    <div class="wrap">
+      <div class="prompt-section__head">
+        <div class="prompt-section__eyebrow">
+          <span class="dot"></span>
+          gotowy do skopiowania
+        </div>
+        <h2 class="prompt-section__title">
+          Prompt <span class="italic">posteru</span> automotive<br>z AI
+        </h2>
+        <p class="prompt-section__desc">
+          Skopiuj poniższy prompt, wpisz markę i model samochodu w oznaczone miejsca i wygeneruj swój poster. Prompt działa najlepiej w ChatGPT. Pamiętaj, by w oknie czatu zaznaczyć opcję tworzenia obrazu!
+        </p>
+      </div>
+
+      <div class="prompt-wrapper">
+        <div class="prompt-toolbar">
+          <div class="prompt-toolbar__label">
+            <div class="prompt-toolbar__dots">
+              <span class="d1"></span><span class="d2"></span><span class="d3"></span>
+            </div>
+            automotive-prompt.txt
+          </div>
+          <button class="btn-copy" id="copyBtn" onclick="copyPrompt()">
+            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="5" y="5" width="9" height="9" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M3 11H2.5A1.5 1.5 0 011 9.5v-7A1.5 1.5 0 012.5 1h7A1.5 1.5 0 0111 2.5V3" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+            <span id="copyLabel">Skopiuj prompt</span>
+          </button>
+        </div>
+        <div class="prompt-body" id="promptBody"></div>
+        <div class="prompt-expand">
+          <button class="btn-expand" id="expandBtn" onclick="toggleExpand()">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2 4.5L6 8.5L10 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <span id="expandLabel">rozwiń pełny prompt</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How to use -->
+  <section class="how-to section">
+    <div class="wrap">
+      <h2 class="how-to__title">Jak <span class="italic">używać</span> promptu?</h2>
+      <div class="how-to__steps">
+        <div class="how-to__step">
+          <div class="how-to__step-num">01</div>
+          <div class="how-to__step-icon">📋</div>
+          <h3 class="how-to__step-title">Skopiuj prompt</h3>
+          <p class="how-to__step-text">Użyj przycisku powyżej, aby skopiować cały prompt do schowka jednym kliknięciem.</p>
+        </div>
+        <div class="how-to__step">
+          <div class="how-to__step-num">02</div>
+          <div class="how-to__step-icon">🚗</div>
+          <h3 class="how-to__step-title">Wpisz markę i model</h3>
+          <p class="how-to__step-text">Wklej prompt do ChatGPT lub innego modelu AI. Zamień <code style="background:var(--lime-tint);padding:2px 6px;border-radius:4px;font-family:var(--f-mono);font-size:12px;">[WPISZ MARKĘ]</code> oraz <code style="background:var(--lime-tint);padding:2px 6px;border-radius:4px;font-family:var(--f-mono);font-size:12px;">[WPISZ MODEL]</code> na wybrane auto. Pamiętaj o włączeniu opcji tworzenia obrazu!</p>
+        </div>
+        <div class="how-to__step">
+          <div class="how-to__step-num">03</div>
+          <div class="how-to__step-icon">✨</div>
+          <h3 class="how-to__step-title">Wygeneruj poster</h3>
+          <p class="how-to__step-text">AI automatycznie rozpozna DNA marki i stworzy luksusowy poster reklamowy w formacie 1080×1350.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap footer">
+      <div class="footer__brand">
+        <span style="width:20px;height:20px;border-radius:6px;background:var(--lime);display:inline-flex;align-items:center;justify-content:center;font-family:var(--f-serif);font-style:italic;font-size:14px;">n</span>
+        natalie.kreatywnie
+      </div>
+      <div>
+        <a href="https://www.instagram.com/natalie.kreatywnie/" target="_blank" rel="noopener">@natalie.kreatywnie</a>
+        <span style="margin-inline:10px;color:var(--line)">·</span>
+        prompt do użytku osobistego i edukacyjnego
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7L5.5 10L11.5 4" stroke="#51F500" stroke-width="2" stroke-linecap="round"/></svg>
+    <span>prompt skopiowany <span class="lime">✓</span></span>
+  </div>
+
+  <script>
+    const PROMPT_TEXT = `
+
+# MASTER PROMPT (PL) — AUTOMOTIVE POSTER GENERATOR
+
+Wklej nazwę marki oraz model samochodu:
+
+**MARKA:** [WPISZ MARKĘ]
+**MODEL:** [WPISZ MODEL]
+
+Na podstawie tej marki i modelu wygeneruj pionowy premium poster motoryzacyjny w estetyce luksusowej reklamy automotive.
+
+---
+
+## ANALIZA MARKI (AUTOMATYCZNIE)
+
+Najpierw automatycznie rozpoznaj:
+
+* logo marki
+* charakter brandingu
+* premium level marki
+* język wizualny marki
+* typ charakterystycznego designu pojazdów
+* ton komunikacji marki
+* segment auta (sport, luxury, SUV, hypercar, EV, daily premium itd.)
+
+Jeśli model jest nierozpoznawalny:
+stwórz najbardziej realistyczną interpretację zgodną z DNA marki.
+
+---
+
+# KOMPOZYCJA GRAFIKI
+
+Wygeneruj pionowy poster reklamowy w układzie editorial premium.
+
+### GÓRNA SEKCJA:
+
+* logo marki
+* nazwa marki
+* subtelna elegancka typografia
+* dużo negative space
+
+---
+
+### CENTRALNA SEKCJA:
+
+Główny samochód jako hero object:
+
+* pełny widok auta
+* dynamic angle 3/4 front view
+* ultra realistic
+* studio lighting
+* glossy reflections
+* premium detailing
+* hero composition
+
+Auto ma być głównym bohaterem plakatu.
+
+---
+
+### TŁO TYPOGRAFICZNE:
+
+Za samochodem umieść ogromny napis:
+
+**[MODEL]**
+
+lub
+
+**[NAZWA MODELU]**
+
+Typografia ma być:
+
+* ogromna
+* minimalistyczna
+* bold
+* stretched
+* condensed
+* premium editorial
+* partially hidden behind car
+
+---
+
+### DODATKOWE ELEMENTY:
+
+Dodaj zależnie od stylu marki:
+
+* tire marks
+* smoke
+* motion blur
+* performance effects
+* luxury reflections
+* floating shadows
+* subtle technical overlays
+
+dla aut sportowych
+
+LUB
+
+clean minimal reflections
+
+dla aut luxury / EV / premium sedan
+
+---
+
+# DOLNA SEKCJA
+
+Dodaj sekcję danych technicznych:
+
+* horsepower
+* 0–100 km/h
+* top speed
+* engine
+
+w eleganckim minimalistycznym układzie.
+
+Może zawierać subtelne ikonki.
+
+---
+
+# STYL WIZUALNY
+
+Połącz estetykę:
+
+* Porsche campaign poster
+* Mercedes AMG brochure
+* luxury dealership advertising
+* Behance automotive showcase
+* modern minimalist editorial design
+* premium commercial photography
+* futuristic automotive branding
+* ultra clean layout
+
+---
+
+# OŚWIETLENIE
+
+* studio lighting
+* dramatic rim light
+* glossy reflections
+* high contrast
+* realistic shadows
+* premium reflections
+
+---
+
+# KOLORYSTYKA
+
+Automatycznie dopasowana do marki:
+
+np.
+
+Mercedes → black / silver / chrome
+Porsche → silver / graphite / white
+Ferrari → red / black
+BMW → blue / black / white
+Audi → grey / metallic
+Tesla → white / minimalist tones
+
+---
+
+# JAKOŚĆ
+
+* ultra realistic
+* highly detailed
+* premium rendering
+* sharp typography
+* cinematic realism
+* advertising quality
+* photorealistic
+* highly polished
+* luxury poster design
+
+---
+
+# FORMAT
+
+vertical poster
+1080x1350
+social media campaign format
+high-end commercial layout
+
+---
+
+# NEGATIVE PROMPT
+
+nie generuj:
+
+* cartoon
+* low quality
+* blurry car
+* distorted wheels
+* extra wheels
+* broken anatomy auta
+* chaos layout
+* cheap typography
+* random background
+* cluttered composition
+* low realism
+
+---
+
+# FINAL OUTPUT
+
+Wygeneruj pojedynczy luksusowy poster reklamowy samochodu wyglądający jak premium kampania marki motoryzacyjnej.
+
+`;
+
+    // Render prompt text into the DOM
+    document.getElementById('promptBody').textContent = PROMPT_TEXT;
+
+    let expanded = false;
+
+    function toggleExpand() {
+      const body = document.getElementById('promptBody');
+      const label = document.getElementById('expandLabel');
+      const btn = document.getElementById('expandBtn');
+      const icon = btn.querySelector('svg path');
+      expanded = !expanded;
+      if (expanded) {
+        body.style.maxHeight = 'none';
+        label.textContent = 'zwiń';
+        icon.setAttribute('d', 'M2 7.5L6 3.5L10 7.5');
+      } else {
+        body.style.maxHeight = '680px';
+        label.textContent = 'rozwiń pełny prompt';
+        icon.setAttribute('d', 'M2 4.5L6 8.5L10 4.5');
+        body.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+
+    function copyPrompt() {
+      navigator.clipboard.writeText(PROMPT_TEXT).then(() => {
+        const btn = document.getElementById('copyBtn');
+        const label = document.getElementById('copyLabel');
+        btn.classList.add('--copied');
+        label.textContent = 'Skopiowano!';
+
+        const toast = document.getElementById('toast');
+        toast.classList.add('is-visible');
+
+        setTimeout(() => {
+          btn.classList.remove('--copied');
+          label.textContent = 'Skopiuj prompt';
+          toast.classList.remove('is-visible');
+        }, 2500);
+      }).catch(() => {
+        // Fallback for older browsers
+        const ta = document.createElement('textarea');
+        ta.value = PROMPT_TEXT;
+        ta.style.position = 'fixed'; ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        document.getElementById('copyLabel').textContent = 'Skopiowano!';
+        setTimeout(() => { document.getElementById('copyLabel').textContent = 'Skopiuj prompt'; }, 2000);
+      });
+    }
+
+    // Nav scroll effect
+    const nav = document.querySelector('.nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('is-scrolled', window.scrollY > 10);
+    }, { passive: true });
+  </script>
+</body>
+</html>
