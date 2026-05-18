@@ -286,6 +286,10 @@ function TutorialsIntro({ tweaks }) {
               <span className="num">03</span>
               <span>klimat analogowych zdjęć · midjourney</span>
             </a>
+            <a href="#automotive" className="tutorials-intro__chip">
+              <span className="num">04</span>
+              <span>premium postery automotive</span>
+            </a>
           </div>
         </div>
       </div>
@@ -495,6 +499,77 @@ function AnalogTeaserSection({ tweaks }) {
           </div>
           <a className="cta" href="analog.html">
             Otwórz tutorial
+            <span className="arrow"><Icon.ArrowRight style={{ width: 14, height: 14 }} /></span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+  );
+}
+
+/* =====================================================
+   Automotive Teaser — zajawka podstrony z promptem automotive
+   ===================================================== */
+const AUTOMOTIVE_PREVIEWS = [
+  { src: "img/auto-warszawa.png", alt: "FSO Warszawa — premium poster automotive", label: "fso warszawa" },
+  { src: "img/auto-polonez.png",  alt: "FSO Polonez — premium poster automotive",  label: "fso polonez"  },
+  { src: "img/auto-126p.png",     alt: "Polski Fiat 126p — premium poster automotive", label: "fiat 126p" },
+  { src: "img/auto-audi-a7.png",  alt: "Audi A7 Sportback — premium poster automotive", label: "audi a7"  },
+  { src: "img/auto-panamera.png", alt: "Porsche Panamera — premium poster automotive", label: "porsche"  },
+];
+
+function AutomotiveTeaserSection({ tweaks }) {
+  const useItalic = tweaks.italicAccent;
+
+  return (
+    <section className="section prompt-teaser" id="automotive">
+      <div className="wrap">
+
+        {/* Header */}
+        <div className="section__head">
+          <div className="section__head-row">
+            <div>
+              <span className="mono">narzędzia · prompty</span>
+              <h2 className="h-section">
+                {useItalic
+                  ? <><span className="italic">Premium postery </span>automotive z AI</>
+                  : "Prompt do posterów automotive"}
+              </h2>
+            </div>
+            <span className="section__head-meta">automotive ● poster reklamowy z AI</span>
+          </div>
+          <p className="prompt-teaser__desc">
+            Oto prompt, dzięki któremu stworzysz luksusowy poster motoryzacyjny. Wpisz markę i model auta, a AI rozpozna DNA marki i zbuduje gotowy plakat reklamowy.
+            Poniżej kilka przykładów tego, co można uzyskać.
+          </p>
+        </div>
+
+        {/* Preview strip */}
+        <div className="prompt-teaser__strip">
+          {AUTOMOTIVE_PREVIEWS.map((img, i) => (
+            <a
+              className="prompt-teaser__card"
+              href="automotive.html"
+              key={i}
+              aria-label={`Przykład posteru automotive — ${img.label}`}
+            >
+              <div className="prompt-teaser__img-wrap">
+                <img src={img.src} alt={img.alt} loading="lazy" />
+              </div>
+              <span className="prompt-teaser__card-label">{img.label}</span>
+            </a>
+          ))}
+        </div>
+
+        {/* CTA bar */}
+        <div className="prompt-teaser__cta-row">
+          <div className="prompt-teaser__pill-group">
+            <span className="pill"><span className="dot"></span>gotowy do skopiowania</span>
+            <span className="pill"><span className="dot"></span>format 1080×1350 px</span>
+          </div>
+          <a className="cta" href="automotive.html">
+            Pobierz prompt
             <span className="arrow"><Icon.ArrowRight style={{ width: 14, height: 14 }} /></span>
           </a>
         </div>
@@ -741,6 +816,7 @@ function App({ tweaks }) {
         <PromptTeaserSection tweaks={tweaks} />
         <SkoraTeaserSection tweaks={tweaks} />
         <AnalogTeaserSection tweaks={tweaks} />
+        <AutomotiveTeaserSection tweaks={tweaks} />
         <AboutSection tweaks={tweaks} />
         <ContactSection tweaks={tweaks} />
       </main>
