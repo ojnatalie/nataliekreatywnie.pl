@@ -288,7 +288,7 @@ function TutorialsIntro({ tweaks }) {
             </a>
             <a href="#automotive" className="tutorials-intro__chip">
               <span className="num">04</span>
-              <span>premium postery automotive</span>
+              <span>premium plakaty automotive</span>
             </a>
           </div>
         </div>
@@ -533,14 +533,14 @@ function AutomotiveTeaserSection({ tweaks }) {
               <span className="mono">narzędzia · prompty</span>
               <h2 className="h-section">
                 {useItalic
-                  ? <><span className="italic">Premium postery </span>automotive z AI</>
+                  ? <><span className="italic">Premium grafiki </span>automotive z AI</>
                   : "Prompt do posterów automotive"}
               </h2>
             </div>
-            <span className="section__head-meta">automotive ● poster reklamowy z AI</span>
+            <span className="section__head-meta">automotive ● plakat reklamowy z AI</span>
           </div>
           <p className="prompt-teaser__desc">
-            Oto prompt, dzięki któremu stworzysz luksusowy poster motoryzacyjny. Wpisz markę i model auta, a AI rozpozna DNA marki i zbuduje gotowy plakat reklamowy.
+            Oto prompt, dzięki któremu stworzysz luksusowś grafikę motoryzacyjną. Wpisz markę i model auta, a AI rozpozna DNA marki i zbuduje gotowy plakat reklamowy.
             Poniżej kilka przykładów tego, co można uzyskać.
           </p>
         </div>
